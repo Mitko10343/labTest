@@ -19,6 +19,7 @@ void setup()
 void draw()
 {
   background(0);
+  drawGrid();
   
 }
 
@@ -59,5 +60,28 @@ void printStar()
   for(Stars stars : starslist)
   {
     println(stars);
+  }
+}
+
+//A method that draws the grid
+void drawGrid()
+{
+  int lineX = 50;
+  int lineY =50;
+  int gap = (width-100)/10;
+  
+  //Drawing the grid
+  strokeWeight(1);
+  stroke(200,75,75);
+  for(int i=0; i<11; i++)
+  {
+    line(lineX,lineY,lineX,height-lineY);
+    lineX = lineX+gap;   
+  }
+  lineX =50;
+  for(int i=0; i<11; i++)
+  {
+    line(lineX,lineY,width-lineX,lineY);
+    lineY = lineY+gap;   
   }
 }
