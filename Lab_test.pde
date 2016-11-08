@@ -13,6 +13,7 @@ void setup()
   //Data read into table
   table = loadTable("Data.csv","header");
   loadData();
+  printStar();
 }
 
 void draw()
@@ -22,7 +23,7 @@ void draw()
 }
 
 //Method that reads the data into a clas constructor
-// and then adds the data from the class constructor onto an array list
+//and then adds the data from the class constructor onto an array list
 void loadData()
 {
    //reading in the data from the file
@@ -42,6 +43,21 @@ void loadData()
      starslist.add(stars);
      
      //Display the data just read into the class
+     //Just for to make sure the correct data is added into class
      println(stars.flag+"\t"+stars.displayName+"\t"+stars.distance+"\t"+stars.x+","+stars.y+","+stars.z+"\t"+stars.starSize+"\n");
+  }
+}
+
+//Method that will print all the data that was entered into the arrayList
+void printStar()
+{
+  
+  println("\n\nData stored into array list\n\n");
+  
+  //For each loop goest through every element of the array list
+  //And displays its content
+  for(Stars stars : starslist)
+  {
+    println(stars);
   }
 }
