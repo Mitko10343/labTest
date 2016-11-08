@@ -2,13 +2,13 @@ class Stars
 {
   int flag;
   String displayName;
-  int distance;
+  float distance;
   float x;
   float y;
   float z;
-  long starSize;
+  float starSize;
   
-  Stars(int flag,String displayName,int distance,float x, float y, float z, long starSize)
+  Stars(int flag,String displayName,float distance,float x, float y, float z, float starSize)
   {
     this.flag = flag;
     this.displayName = displayName;
@@ -19,5 +19,9 @@ class Stars
     this.starSize = starSize;
   }
   
-  
+  //converting the class object into a string
+  String toString()
+  {
+    return flag+"\t"+displayName+"\t"+distance+"\t"+x+","+y+","+z+"\t"+starSize;
+  }
 }
